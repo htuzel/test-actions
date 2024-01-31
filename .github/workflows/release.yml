@@ -21,6 +21,12 @@ jobs:
         with:
           fetch-depth: '0'
 
+      - name: Modify README.md
+        uses: jaywcjlove/github-action-modify-file-content@main
+        with:
+          path: README.md
+          body: "Version ${{ inputs.next_version }}"
+
       - name: update version name
         uses: jaywcjlove/github-action-package@main
         with:
