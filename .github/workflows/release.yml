@@ -39,6 +39,7 @@ jobs:
           git config --local user.name "GitHub Actions"
           git checkout develop
           git add package.json
+          git add README.md
           git commit -m "Update version to ${{ inputs.next_version }}"
           git push
 
