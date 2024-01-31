@@ -17,19 +17,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
+
       - name: debug
         run: ls
 
       - name: update version name
         uses: jaywcjlove/github-action-package@main
         with:
-          path: '../package.json'
+          path: 'package.json'
 
-      - run: echo "version - ${{ inputs.next_version }}
-
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: '0'
+      - run: echo "version - ${{ inputs.next_version }}"
 
       - name: Merge develop
         run: |
