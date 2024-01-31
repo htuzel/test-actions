@@ -17,7 +17,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: jaywcjlove/github-action-package@main
+      - name: update version name
+        uses: jaywcjlove/github-action-package@mai
+        with:
+          path: './package.json'
       - run: echo "version - ${{ inputs.next_version }}
 
       - uses: actions/checkout@v4
