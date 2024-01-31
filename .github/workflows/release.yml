@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: update version name
-        uses: jaywcjlove/github-action-package@mai
+        uses: jaywcjlove/github-action-package@main
         with:
           path: './package.json'
       - run: echo "version - ${{ inputs.next_version }}
