@@ -1,6 +1,6 @@
 {
   "name": "test-actions",
-  "version": "x.x.x",
+  "version": "30.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
