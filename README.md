@@ -1,4 +1,4 @@
 # test-actions
-<!--GAMFC-->Version 1.1.0<!--GAMFC-END-->
+<!--GAMFC-->Version x.x.x<!--GAMFC-END-->
 
 devepl
