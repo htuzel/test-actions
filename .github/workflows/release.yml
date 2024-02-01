@@ -45,14 +45,20 @@ jobs:
           git commit -m "Update version to ${{ inputs.next_version }}"
           git push
 
-      - name: Merge develop
+      - name: Merge develop into main
         run: |
+          set -e
+          echo "Checking out develop branch..."
           git checkout develop
-          git pull
+          git pull --ff-only
+          echo "Switching to main branch..."
           git checkout main
-          git merge origin/develop
+          git pull --ff-only
+          echo "Merging develop into main..."
+          git merge --no-ff origin/develop
+          echo "Pushing changes..."
           git push
-
+        
       - name: Draft release
         run: gh release create $VERSION --generate-notes --draft
         env:
