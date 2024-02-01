@@ -1,4 +1,4 @@
 # test-actions
-<!--GAMFC-->Version 30.1.0<!--GAMFC-END-->
+<!--GAMFC-->Version 24.1.0<!--GAMFC-END-->
 
 devepl
